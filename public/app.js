@@ -1,13 +1,13 @@
 /* ==========================================================================
-   CELULANDIA ATACADISTA - MODELED AFTER SODELLA STORE JS ENGINE
+   CELULANDIA ATACADISTA - SODELLA MODEL JS ENGINE
    WhatsApp Smart Cart, Filters & QuickView Modal
    ========================================================================== */
 
 const WHATSAPP_NUMBER = "5521987680702";
 
-// Products Catalog Data
+// Products Catalog Data (iPhone 15 Removed as requested)
 const PRODUCTS = [
-  // MOTOS ELÉTRICAS BIKELANDIA
+  // MOTOS ELÉTRICAS BIKELANDIA (Fotos do Usuário)
   {
     id: "moto-1",
     name: "Scooter Elétrica Celulandia Tricolor Edition",
@@ -36,10 +36,10 @@ const PRODUCTS = [
     priceWholesale: 4990,
     image: "images/moto-e-3.png",
     badge: "SUPER POTÊNCIA",
-    specs: ["Pneu Largo Off-Road Fat Tire", "Motor 1500W Ultra", "Bateria Removível 20Ah", "Amortecedor Duplo Reinforçado"]
+    specs: ["Pneu Largo Off-Road Fat Tire", "Motor 1500W Ultra", "Bateria Removível 20Ah", "Amortecedor Duplo Reforçado"]
   },
 
-  // SMARTPHONES REAL STORE PRODUCTS
+  // SMARTPHONES REAL STORE PRODUCTS (Fotos do Usuário - iPhone 15 Removido)
   {
     id: "phone-poco-c71",
     name: "Smartphone POCO C71 (Xiaomi) Lacrado - Várias Cores",
@@ -60,18 +60,8 @@ const PRODUCTS = [
     badge: "✨ NOVO NO ESTOQUE",
     specs: ["Cores: Preto & Verde Mint", "Bateria 5000mAh de Longa Duração", "Super Custo-Benefício Atacadista", "Caixa Original"]
   },
-  {
-    id: "phone-1",
-    name: "Apple iPhone 15 Pro Max 256GB Titanium Blue",
-    category: "celulares",
-    priceRetail: 7100,
-    priceWholesale: 6290,
-    image: "images/iphone-15.jpg",
-    badge: "LANÇAMENTO APPLE",
-    specs: ["Chip A17 Pro Bionic", "Câmera 48MP Zoom 5x", "Super Retina XDR OLED", "Garantia Oficial Apple 1 Ano"]
-  },
 
-  // SMARTWATCHES REAL STORE PRODUCTS
+  // SMARTWATCHES REAL STORE PRODUCTS (Fotos do Usuário)
   {
     id: "watch-ultra-black",
     name: "Smartwatch Ultra 49mm Titanium Black + Indução",
@@ -103,7 +93,7 @@ const PRODUCTS = [
     specs: ["Acabamento em Ouro Dourado 18K", "Pulseira Metálica Ouro + Silicone Preta", "Chave Ajustadora de Elos", "Estojo Presenteável Premium"]
   },
 
-  // FONES & ÁUDIO REAL STORE PRODUCTS
+  // FONES & ÁUDIO REAL STORE PRODUCTS (Fotos do Usuário)
   {
     id: "audio-airdots",
     name: "Fone de Ouvido TWS AirDots Bluetooth 5.1 sem Fio",
@@ -145,7 +135,7 @@ const PRODUCTS = [
     specs: ["Conector Lightning para iPhone", "Controle de Volume no Cabo", "Microfone Embutido", "Áudio HD Hi-Fi"]
   },
 
-  // PEÇAS & ACESSÓRIOS REAL STORE PRODUCTS
+  // PEÇAS & ACESSÓRIOS REAL STORE PRODUCTS (Fotos do Usuário)
   {
     id: "part-capas-coloridas",
     name: "Capas de Silicone Coloridas Anti-Impacto para Celular",
@@ -205,10 +195,10 @@ function renderCategories() {
 
   const cats = [
     { id: 'all', label: 'TODOS OS PRODUTOS' },
-    { id: 'celulares', label: 'SMARTPHONES' },
     { id: 'motos', label: 'MOTOS ELÉTRICAS' },
-    { id: 'fones', label: 'FONES & ÁUDIO' },
+    { id: 'celulares', label: 'SMARTPHONES' },
     { id: 'relogios', label: 'SMARTWATCHES' },
+    { id: 'fones', label: 'FONES & ÁUDIO' },
     { id: 'pecas', label: 'PEÇAS & ACESSÓRIOS' }
   ];
 

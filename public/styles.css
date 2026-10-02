@@ -1,6 +1,6 @@
 /* ==========================================================================
    CELULANDIA ATACADISTA - MODELED AFTER SODELLA STORE DESIGN
-   Minimalist High-Fashion & Tech Aesthetic (Inter Typography & Letter Spacing)
+   Minimalist High-Fashion & Tech Aesthetic (Full Mobile Responsiveness)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -12,11 +12,11 @@
   --text-color: #111111;
   --text-light: #777777;
   --border-color: #e5e5e5;
-  --accent-color: #0284C7; /* Celulandia Blue Accent */
+  --accent-color: #0284C7;
   --whatsapp-color: #25D366;
   --whatsapp-hover: #128C7E;
   
-  --font-family: 'Inter', sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --transition-speed: 0.3s;
 }
 
@@ -60,17 +60,17 @@ img {
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 14px 28px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   transition: all var(--transition-speed) ease;
   border: 1px solid var(--primary-color);
   display: inline-flex;
@@ -87,12 +87,12 @@ img {
 .btn-secondary {
   background-color: transparent;
   color: var(--primary-color);
-  padding: 14px 28px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  font-size: 0.85rem;
   font-weight: 600;
   border: 1px solid var(--primary-color);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   transition: all var(--transition-speed) ease;
 }
 
@@ -105,11 +105,11 @@ img {
 .top-bar {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   text-align: center;
 }
 
@@ -130,12 +130,12 @@ img {
   color: var(--secondary-color);
 }
 
-/* Navbar */
+/* Navbar Sticky Responsive */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.85rem 1.5rem;
   position: sticky;
   top: 0;
   width: 100%;
@@ -144,49 +144,52 @@ img {
   -webkit-backdrop-filter: blur(8px);
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.75rem;
 }
 
 .navbar-logo-img {
-  height: 42px;
+  height: 40px;
   width: auto;
+  border-radius: 4px;
 }
 
 .navbar-logo-text {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--primary-color);
+  line-height: 1;
 }
 
 .navbar-logo-sub {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: var(--text-light);
   display: block;
+  margin-top: 2px;
 }
 
 /* Search Box */
 .search-wrapper {
   position: relative;
-  max-width: 380px;
+  max-width: 360px;
   width: 100%;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.6rem 1rem 0.6rem 2.4rem;
+  padding: 0.55rem 0.85rem 0.55rem 2.2rem;
   background-color: var(--background-color);
   border: 1px solid var(--border-color);
-  border-radius: 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.5px;
   color: var(--text-color);
   transition: border-color var(--transition-speed);
@@ -199,7 +202,7 @@ img {
 
 .search-icon-svg {
   position: absolute;
-  left: 0.8rem;
+  left: 0.7rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-light);
@@ -208,7 +211,7 @@ img {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .cart-icon-wrapper {
@@ -216,8 +219,8 @@ img {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  gap: 0.4rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -228,8 +231,8 @@ img {
   color: var(--secondary-color);
   font-size: 0.7rem;
   font-weight: 700;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -240,20 +243,25 @@ img {
 .categories-bar {
   border-bottom: 1px solid var(--border-color);
   background-color: var(--secondary-color);
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
   overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.categories-bar::-webkit-scrollbar {
+  display: none;
 }
 
 .categories-list {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  white-space: nowrap;
+  gap: 1.5rem;
+  padding: 0 16px;
 }
 
 .cat-link {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-light);
@@ -267,10 +275,11 @@ img {
   border-bottom-color: var(--primary-color);
 }
 
-/* Hero Section (Modeled after SoDella 80vh full width) */
+/* Hero Section (Modeled after SoDella 75vh) */
 .hero {
   position: relative;
-  height: 75vh;
+  height: 70vh;
+  min-height: 420px;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -288,7 +297,6 @@ img {
   height: 100%;
   object-fit: cover;
   opacity: 0.55;
-  filter: contrast(1.05);
 }
 
 .hero-overlay {
@@ -297,41 +305,41 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 10;
   color: white;
-  max-width: 900px;
-  padding: 0 20px;
+  max-width: 850px;
+  padding: 0 16px;
 }
 
 .hero-tag {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #38BDF8;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   display: block;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 300;
-  letter-spacing: 4px;
-  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 300;
-  letter-spacing: 1.5px;
-  margin-bottom: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
   text-transform: uppercase;
   color: #e5e5e5;
 }
@@ -339,7 +347,7 @@ img {
 .hero-btns {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -347,15 +355,15 @@ img {
   background-color: var(--whatsapp-color);
   color: white;
   border: 1px solid var(--whatsapp-color);
-  padding: 14px 28px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   transition: all var(--transition-speed) ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .btn-whatsapp-hero:hover {
@@ -367,7 +375,7 @@ img {
 .trust-bar {
   background-color: var(--background-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .trust-flex {
@@ -375,80 +383,86 @@ img {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .trust-item-icon {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 .trust-item-title {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .trust-item-desc {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--text-light);
 }
 
 /* Section Title */
 .section-title {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin: 4rem 0 0.5rem;
+  letter-spacing: 2px;
+  margin: 3rem 0 0.4rem;
   text-align: center;
 }
 
 .section-sub {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-light);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Product Cards Grid (Modeled after SoDella aspect-ratio 3/4) */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-bottom: 5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
 }
 
 .product-card {
   cursor: pointer;
   transition: transform var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-image-wrapper {
   position: relative;
   overflow: hidden;
   aspect-ratio: 3/4;
-  background-color: var(--background-color);
-  margin-bottom: 1rem;
+  background-color: #f5f5f5;
+  margin-bottom: 0.8rem;
   border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px;
 }
 
+/* Contain ensures product photos never get clipped or broken */
 .product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
 .product-card:hover .product-image {
@@ -457,15 +471,15 @@ img {
 
 .product-badge-tag {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 8px;
+  left: 8px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 3px 8px;
   z-index: 2;
 }
 
@@ -474,10 +488,10 @@ img {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.88);
   color: white;
-  padding: 12px;
-  font-size: 0.8rem;
+  padding: 10px;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -492,49 +506,54 @@ img {
 
 .product-info {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .product-category-name {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text-light);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .product-title {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.4rem;
   color: var(--text-color);
+  line-height: 1.35;
   height: 2.7em;
   overflow: hidden;
 }
 
 .product-price {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .product-retail-price {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-light);
   text-decoration: line-through;
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
   font-weight: 400;
 }
 
 .btn-add-cart-card {
   width: 100%;
+  margin-top: auto;
   padding: 10px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -547,9 +566,9 @@ img {
   color: var(--primary-color);
 }
 
-/* Feedbacks / Reviews Section (Modeled after SoDella) */
+/* Feedbacks / Reviews Section */
 .feedbacks-section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   background-color: var(--background-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -557,31 +576,31 @@ img {
 
 .feedbacks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .feedback-card {
   background-color: var(--secondary-color);
   border: 1px solid var(--border-color);
-  padding: 2rem;
+  padding: 1.75rem;
   transition: transform var(--transition-speed) ease;
 }
 
 .feedback-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .feedback-quote {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-style: italic;
   color: var(--text-color);
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
 }
 
 .feedback-author {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -590,20 +609,20 @@ img {
 
 /* Location Card */
 .location-section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
 .location-box {
   border: 1px solid var(--border-color);
   background-color: var(--secondary-color);
-  padding: 3rem;
+  padding: 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
-/* Modal Quick View (Modeled after SoDella) */
+/* Modal Quick View */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -615,7 +634,7 @@ img {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 2rem;
+  padding: 1rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -629,7 +648,7 @@ img {
 .modal-content {
   background: white;
   display: flex;
-  max-width: 900px;
+  max-width: 850px;
   width: 100%;
   max-height: 90vh;
   position: relative;
@@ -639,13 +658,13 @@ img {
 
 .modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.2rem;
+  top: 0.8rem;
+  right: 0.8rem;
+  font-size: 1.1rem;
   z-index: 10;
   background: white;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -657,20 +676,21 @@ img {
 .modal-image-col {
   flex: 1;
   background: var(--background-color);
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-image-col img {
-  max-height: 380px;
+  max-height: 320px;
+  max-width: 100%;
   object-fit: contain;
 }
 
 .modal-info-col {
   flex: 1;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -678,21 +698,21 @@ img {
 }
 
 .modal-title {
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-bottom: 0.8rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .modal-price {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: var(--primary-color);
 }
 
-/* Cart Sidebar (Modeled after SoDella 400px Right Drawer) */
+/* Cart Sidebar (Drawer 420px / 100% Mobile) */
 .cart-sidebar-overlay {
   position: fixed;
   top: 0;
@@ -730,7 +750,7 @@ img {
 }
 
 .cart-header {
-  padding: 1.8rem 2rem;
+  padding: 1.5rem 1.75rem;
   border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
@@ -738,7 +758,7 @@ img {
 }
 
 .cart-header h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -747,22 +767,23 @@ img {
 .cart-items {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
 }
 
 .cart-item {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-color);
 }
 
 .cart-item-image {
-  width: 70px;
-  height: 90px;
-  object-fit: cover;
+  width: 65px;
+  height: 80px;
+  object-fit: contain;
   background-color: var(--background-color);
+  padding: 4px;
 }
 
 .cart-item-details {
@@ -770,27 +791,27 @@ img {
 }
 
 .cart-item-title {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .cart-item-price {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .cart-item-qty {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
 }
 
 .qty-btn {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
@@ -799,38 +820,38 @@ img {
 }
 
 .cart-footer {
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   border-top: 1px solid var(--border-color);
   background-color: var(--background-color);
 }
 
 .form-field {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
 }
 
 .form-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.6rem 0.8rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid var(--border-color);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   background: white;
 }
 
 .cart-total {
   display: flex;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 0.85rem 0;
   text-transform: uppercase;
 }
 
@@ -839,8 +860,8 @@ img {
   background-color: var(--whatsapp-color);
   color: white;
   border: 1px solid var(--whatsapp-color);
-  padding: 14px;
-  font-size: 0.9rem;
+  padding: 12px;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -858,16 +879,16 @@ img {
 /* Toast */
 .toast-container {
   position: fixed;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
   z-index: 1001;
 }
 
 .toast {
   background: var(--primary-color);
   color: white;
-  padding: 1rem 1.5rem;
-  font-size: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -878,8 +899,8 @@ img {
 .footer {
   background-color: var(--primary-color);
   color: white;
-  padding: 4rem 2rem 2rem;
-  margin-top: 4rem;
+  padding: 3.5rem 1.5rem 1.5rem;
+  margin-top: 3rem;
 }
 
 .footer-content {
@@ -888,22 +909,22 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2.5rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer-col h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-weight: 400;
 }
 
 .footer-col p, .footer-col a {
   color: #aaaaaa;
-  font-size: 0.88rem;
-  margin-bottom: 0.8rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.6rem;
   display: block;
 }
 
@@ -914,36 +935,84 @@ img {
 .footer-bottom {
   max-width: 1240px;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid #333333;
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #777777;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-/* Media Queries */
-@media (max-width: 900px) {
-  .hero-content h1 {
-    font-size: 2.4rem;
+/* ==========================================================================
+   RESPONSIVE MOBILE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+  }
+  .search-wrapper {
+    order: 3;
+    max-width: 100%;
+    margin-top: 0.4rem;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .location-box {
     grid-template-columns: 1fr;
+    padding: 1.75rem;
   }
   .modal-content {
     flex-direction: column;
     max-height: 85vh;
   }
+  .modal-image-col img {
+    max-height: 220px;
+  }
+  .modal-info-col {
+    padding: 1.5rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  .top-bar-container {
+    justify-content: center;
+    text-align: center;
+  }
+  .hero {
+    height: 60vh;
+    min-height: 380px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .product-image-wrapper {
+    padding: 8px;
+  }
+  .product-title {
+    font-size: 0.8rem;
+  }
+  .product-price {
+    font-size: 0.95rem;
+  }
+  .btn-add-cart-card {
+    padding: 8px;
+    font-size: 0.72rem;
+  }
   .cart-sidebar {
     width: 100%;
     right: -100%;
-  }
-  .search-wrapper {
-    order: 3;
-    max-width: 100%;
-    margin-top: 0.5rem;
   }
 }
