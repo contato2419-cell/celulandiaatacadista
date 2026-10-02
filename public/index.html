@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Celulandia Atacadista | Distribuidora Oficial de Celulares, Motos Elétricas & Peças</title>
+  <title>CELULANDIA ATACADISTA | Celulares, Motos Elétricas & Peças</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Celulandia Atacadista - A maior distribuidora de smartphones, motos elétricas Bikelandia, fones, smartwatches e peças de celular no Rio de Janeiro." />
-  <meta name="keywords" content="Celulandia Atacadista, Celulares Atacado, Moto Elétrica Rio de Janeiro, Peças de Celular Santa Cruz, POCO C71, realme Note 60x" />
-
+  <meta name="description" content="Celulandia Atacadista - A melhor distribuidora de smartphones, motos elétricas Bikelandia, fones, smartwatches e peças de celular no Rio de Janeiro." />
+  
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
@@ -19,132 +18,120 @@
   <div class="top-bar">
     <div class="container top-bar-container">
       <div>
-        ⚡ <span class="top-bar-bold">CELULANDIA ATACADISTA</span> • Distribuição Direta com Desconto no PIX!
+        ⚡ <strong>CELULANDIA ATACADISTA</strong> &nbsp;|&nbsp; PEÇAS, ACESSÓRIOS, CELULARES &amp; MOTOS ELÉTRICAS BIKELANDIA
       </div>
-      <div class="top-bar-contact">
-        <a href="https://wa.me/5521987680702" target="_blank" class="top-bar-link">
-          💬 <strong>(21) 98768-0702</strong>
-        </a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Isabel,+07+-+Santa+Cruz,+Rio+de+Janeiro+-+RJ" target="_blank" class="top-bar-link">
-          📍 Av. Isabel, 07 - Santa Cruz, RJ
-        </a>
+      <div>
+        📍 <strong>AV. ISABEL, 07 - SANTA CRUZ / RJ</strong> &nbsp;|&nbsp; 
+        <a href="https://wa.me/5521987680702" target="_blank" class="top-bar-link">💬 <strong>(21) 98768-0702</strong></a>
       </div>
     </div>
   </div>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="container navbar-container">
-      <!-- Brand Logo -->
-      <a href="#" class="brand-wrapper">
-        <img src="public/images/logo-original.png" alt="Celulandia Atacadista Logo" class="brand-logo-img" />
-        <div class="brand-info">
-          <span class="brand-title">CELULANDIA</span>
-          <span class="brand-sub">ATACADISTA • SANTA CRUZ</span>
-        </div>
+    <a href="#" class="navbar-brand">
+      <img src="public/images/logo-original.png" alt="Celulandia Atacadista Logo" class="navbar-logo-img" />
+      <div>
+        <span class="navbar-logo-text">CELULANDIA</span>
+        <span class="navbar-logo-sub">ATACADISTA • RIO DE JANEIRO</span>
+      </div>
+    </a>
+
+    <!-- Search Input -->
+    <div class="search-wrapper">
+      <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="search-input" class="search-input" placeholder="PESQUISAR PRODUTOS..." />
+    </div>
+
+    <!-- Header Actions -->
+    <div class="navbar-actions">
+      <a href="https://wa.me/5521987680702" target="_blank" class="btn-primary" style="padding: 10px 18px; font-size: 0.8rem;">
+        💬 WHATSAPP
       </a>
 
-      <!-- Search Container -->
-      <div class="search-container">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="Buscar produtos no catálogo..." />
-      </div>
-
-      <!-- Header Actions -->
-      <div class="header-actions">
-        <a href="https://wa.me/5521987680702?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20da%20Celulandia%20Atacadista." target="_blank" class="btn-header-whatsapp">
-          💬 WhatsApp
-        </a>
-
-        <button id="open-cart-btn" class="btn-header-cart">
-          🛒 Sacola <span id="cart-count" class="cart-badge">0</span>
-        </button>
+      <div class="cart-icon-wrapper" id="open-cart-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>SACOLA</span>
+        <span id="cart-count" class="cart-badge">0</span>
       </div>
     </div>
   </header>
 
-  <!-- Categories Subnav -->
-  <nav class="categories-nav-bar">
-    <div class="container categories-container" id="categories-nav">
-      <!-- Injected via JS -->
+  <!-- Categories Filter Bar -->
+  <nav class="categories-bar">
+    <div class="container">
+      <div class="categories-list" id="categories-nav">
+        <!-- Injected via JS -->
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="hero-pill-badge">
-          ⭐ 4.3 (89 Avaliações no Google) • Loja Física em Santa Cruz
-        </div>
-        <h1 class="hero-headline">
-          Tecnologia & <span>Mobilidade Elétrica</span> com Preço de Fábrica
-        </h1>
-        <p class="hero-description">
-          Smartphones lacrados, Scooters elétricas Bikelandia, fones Bluetooth, smartwatches e peças de reposição com garantia e entrega rápida em todo o Rio de Janeiro.
-        </p>
+  <!-- Hero Section (Modeled after SoDella 75vh full width) -->
+  <section class="hero">
+    <img src="public/images/hero-bg.png" alt="Showroom Celulandia" class="hero-bg-img" />
+    <div class="hero-overlay"></div>
 
-        <div class="hero-cta-group">
-          <a href="#catalogo" class="btn-hero-primary">
-            🚀 Ver Catálogo Completo
-          </a>
-          <a href="https://wa.me/5521987680702?text=Ol%C3%A1%21%20Quero%20receber%20a%20tabela%20de%20pre%C3%A7os%20no%20atacado%21" target="_blank" class="btn-hero-whatsapp">
-            💬 Tabela de Preços Atacado
-          </a>
+    <div class="hero-content">
+      <span class="hero-tag">ATACADO &amp; VAREJO • SANTA CRUZ / RJ</span>
+      <h1>CELULANDIA ATACADISTA</h1>
+      <p>SMARTPHONES, MOTOS ELÉTRICAS BIKELANDIA, SMARTWATCHES E PEÇAS COM PREÇO DE FÁBRICA</p>
+
+      <div class="hero-btns">
+        <a href="#catalogo" class="btn-primary">
+          VER PRODUTOS
+        </a>
+        <a href="https://wa.me/5521987680702?text=Ol%C3%A1%21%20Gostaria%20de%20receber%20a%20tabela%20de%20pre%C3%A7os%20no%20atacado%21" target="_blank" class="btn-whatsapp-hero">
+          💬 TABELA NO WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Features Bar -->
+  <section class="trust-bar">
+    <div class="container trust-flex">
+      <div class="trust-item">
+        <span class="trust-item-icon">🛵</span>
+        <div>
+          <div class="trust-item-title">MOTOS BIKELANDIA</div>
+          <div class="trust-item-desc">Alta autonomia e potência</div>
         </div>
       </div>
-
-      <!-- Hero Photo Card -->
-      <div class="hero-photo-card">
-        <img src="public/images/hero-bg.png" alt="Showroom Celulandia Atacadista" />
-        <div class="hero-photo-overlay">
-          <span class="hero-photo-tag">Showroom Oficial</span>
-          <div class="hero-photo-title">Celulandia & Bikelandia Santa Cruz</div>
+      <div class="trust-item">
+        <span class="trust-item-icon">📱</span>
+        <div>
+          <div class="trust-item-title">CELULARES LACRADOS</div>
+          <div class="trust-item-desc">POCO, realme, Xiaomi e iPhone</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item-icon">⚡</span>
+        <div>
+          <div class="trust-item-title">DESCONTO NO PIX</div>
+          <div class="trust-item-desc">Melhor preço de atacado</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-item-icon">📍</span>
+        <div>
+          <div class="trust-item-title">LOJA EM SANTA CRUZ</div>
+          <div class="trust-item-desc">Av. Isabel, 07 - Santa Cruz / RJ</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Features Grid -->
-  <section class="container">
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon">🛵</div>
-        <div class="trust-text">
-          <h4>Motos & Scooters Elétricas</h4>
-          <p>Modelos com alta autonomia</p>
-        </div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">📱</div>
-        <div class="trust-text">
-          <h4>Celulares Lacrados</h4>
-          <p>POCO, realme, Xiaomi e iPhone</p>
-        </div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">🔧</div>
-        <div class="trust-text">
-          <h4>Peças & Assistência</h4>
-          <p>Telas, baterias e capas no atacado</p>
-        </div>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">📍</div>
-        <div class="trust-text">
-          <h4>Pronta Entrega em Santa Cruz</h4>
-          <p>Retire na Av. Isabel, 07</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Catalog -->
+  <!-- Catalog Section -->
   <main class="container" id="catalogo">
-    <div class="section-header">
-      <h2 class="section-title">Catálogo de Produtos</h2>
-      <p class="section-subtitle">Selecione os itens e envie seu pedido diretamente pro nosso WhatsApp</p>
-    </div>
+    <h2 class="section-title">CATÁLOGO EM DESTAQUE</h2>
+    <p class="section-sub">SELEÇÃO DE PRODUTOS COM PREÇO DE ATACADO E ENTREGA RÁPIDA</p>
 
     <!-- Products Grid -->
     <div class="products-grid" id="products-grid">
@@ -152,190 +139,175 @@
     </div>
   </main>
 
-  <!-- Store Info & Reviews -->
-  <section class="container">
-    <div class="store-info-section">
-      <div class="store-info-grid">
-        <!-- Reviews -->
-        <div>
-          <h3 class="info-title">⭐ Avaliações dos Clientes (4.3 / 5.0)</h3>
-          <div class="reviews-list">
-            <div class="review-card">
-              "Fornecedor excelente de peças e acessórios pra celulares. Ótimo atendimento e preço justo."
-              <span class="review-author">— Avaliação no Google Maps</span>
-            </div>
-            <div class="review-card">
-              "Os melhores vendedores, preço q cabe no meu bolso. Comprei minha scooter elétrica e recomendo!"
-              <span class="review-author">— Cliente Satisfeito</span>
-            </div>
-            <div class="review-card">
-              "Primeira vez q compro peça lá, ótimo atendimento e entrega super rápida."
-              <span class="review-author">— Assistência Técnica RJ</span>
-            </div>
-          </div>
+  <!-- Feedbacks Section (Modeled after SoDella) -->
+  <section class="feedbacks-section">
+    <div class="container">
+      <h2 class="section-title">AVALIAÇÕES DOS CLIENTES</h2>
+      <p class="section-sub">4.3 ★ (89 AVALIAÇÕES NO GOOGLE MAPS)</p>
+
+      <div class="feedbacks-grid">
+        <div class="feedback-card">
+          <p class="feedback-quote">"Fornecedor excelente de peças e acessórios pra celulares. Ótimo atendimento e preço justo no Rio de Janeiro."</p>
+          <span class="feedback-author">— CLIENTE GOOGLE MAPS</span>
         </div>
-
-        <!-- Location -->
-        <div>
-          <h3 class="info-title">📍 Endereço & Atendimento</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.6;">
-            <strong>Av. Isabel, 07 - Santa Cruz, Rio de Janeiro - RJ, 23510-151</strong><br /><br />
-            <strong>Horário de Funcionamento:</strong><br />
-            • Segunda a Sábado: 08:00 às 20:00<br />
-            • Domingo: 09:00 às 14:00<br /><br />
-            <strong>Atendimento WhatsApp:</strong> (21) 98768-0702
-          </p>
-
-          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Isabel,+07+-+Santa+Cruz,+Rio+de+Janeiro+-+RJ" target="_blank" class="btn-hero-primary" style="display: inline-flex; width: auto; font-size: 0.9rem;">
-            🗺️ Abrir no Google Maps
-          </a>
+        <div class="feedback-card">
+          <p class="feedback-quote">"Os melhores vendedores, preço q cabe no meu bolso. Comprei minha scooter elétrica e recomendo a loja!"</p>
+          <span class="feedback-author">— CLIENTE SATISFEITO</span>
+        </div>
+        <div class="feedback-card">
+          <p class="feedback-quote">"Primeira vez q compro peça lá, ótimo atendimento e entrega super rápida."</p>
+          <span class="feedback-author">— ASSISTÊNCIA TÉCNICA RJ</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cart Drawer -->
-  <div class="cart-overlay" id="cart-overlay">
-    <div class="cart-drawer">
-      <div class="cart-drawer-header">
-        <h3 class="cart-drawer-title">🛒 Sua Sacola de Compras</h3>
-        <button id="close-cart-btn" class="btn-close-drawer">✕</button>
+  <!-- Location Section -->
+  <section class="location-section">
+    <div class="container">
+      <div class="location-box">
+        <div>
+          <h2 class="section-title" style="text-align: left; margin: 0 0 1rem 0;">LOJA FÍSICA</h2>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-color);">
+            <strong>ENDEREÇO:</strong><br />
+            Av. Isabel, 07 - Santa Cruz, Rio de Janeiro - RJ, 23510-151
+          </p>
+          <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--text-color);">
+            <strong>HORÁRIO DE FUNCIONAMENTO:</strong><br />
+            • Segunda a Sábado: 08:00 – 20:00<br />
+            • Domingo: 09:00 – 14:00
+          </p>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Isabel,+07+-+Santa+Cruz,+Rio+de+Janeiro+-+RJ" target="_blank" class="btn-primary">
+            ABRIR NO GOOGLE MAPS
+          </a>
+        </div>
+
+        <div>
+          <img src="public/images/logo-original.png" alt="Celulandia Logo" style="max-height: 180px; margin: 0 auto;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Sidebar (Modeled after SoDella 400px Right Drawer) -->
+  <div class="cart-sidebar-overlay" id="cart-overlay">
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h2>SACOLA DE COMPRAS</h2>
+        <button id="close-cart-btn" style="font-size: 1.2rem;">✕</button>
       </div>
 
-      <div class="cart-drawer-body" id="cart-items-body">
+      <div class="cart-items" id="cart-items-body">
         <!-- Cart Items Injected -->
       </div>
 
-      <div class="cart-drawer-footer">
+      <div class="cart-footer">
         <form onsubmit="return false;">
           <div class="form-field">
-            <label class="form-label" for="customer-name">Seu Nome Completo *</label>
-            <input type="text" id="customer-name" class="form-input" placeholder="Digite seu nome..." required />
+            <label class="form-label">NOME COMPLETO *</label>
+            <input type="text" id="customer-name" class="form-input" placeholder="SEU NOME COMPLETO" required />
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="delivery-mode">Forma de Entrega</label>
+            <label class="form-label">FORMA DE ENTREGA</label>
             <select id="delivery-mode" class="form-input">
-              <option value="Retirada em Santa Cruz (Av. Isabel, 07)">📍 Retirada na Loja em Santa Cruz (Av. Isabel 07)</option>
-              <option value="Entrega Expressa no Rio de Janeiro">🚚 Entrega Expressa no RJ</option>
-              <option value="Envio via Transportadora / Correios">📦 Envio para Outras Regiões</option>
+              <option value="Retirada na Loja (Av. Isabel, 07 - Santa Cruz)">RETIRADA EM SANTA CRUZ (AV. ISABEL 07)</option>
+              <option value="Entrega Expressa no Rio de Janeiro">ENTREGA EXPRESSA NO RJ</option>
+              <option value="Envio via Transportadora / Correios">ENVIO PARA OUTROS MUNICÍPIOS</option>
             </select>
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="payment-mode">Forma de Pagamento</label>
+            <label class="form-label">FORMA DE PAGAMENTO</label>
             <select id="payment-mode" class="form-input">
-              <option value="PIX com Desconto Atacado">⚡ PIX (Com Desconto Atacado)</option>
-              <option value="Cartão de Crédito em até 12x">💳 Cartão de Crédito (até 12x)</option>
-              <option value="Dinheiro no Ato da Retirada">💵 Dinheiro na Retirada</option>
+              <option value="PIX com Desconto Atacado">PIX (COM DESCONTO ATACADO)</option>
+              <option value="Cartão de Crédito até 12x">CARTÃO DE CRÉDITO (ATÉ 12X)</option>
+              <option value="Dinheiro no Ato da Retirada">DINHEIRO NA RETIRADA</option>
             </select>
           </div>
 
           <div class="form-field">
-            <label class="form-label" for="order-notes">Observação / Cor / Modelo</label>
-            <input type="text" id="order-notes" class="form-input" placeholder="Ex: Capa na cor preta, cabo extra..." />
+            <label class="form-label">OBSERVAÇÕES / MODELO / COR</label>
+            <input type="text" id="order-notes" class="form-input" placeholder="EX: MODELO NA COR PRETA..." />
           </div>
         </form>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin: 1rem 0; font-weight: 800; font-size: 1.1rem; color: var(--brand-navy);">
-          <span>Total:</span>
-          <span id="cart-total" style="color: var(--brand-green);">R$ 0,00</span>
+        <div class="cart-total">
+          <span>TOTAL ATACADO:</span>
+          <span id="cart-total">R$ 0,00</span>
         </div>
 
-        <button id="send-whatsapp-btn" class="btn-checkout-whatsapp">
-          🚀 FINALIZAR PEDIDO NO WHATSAPP
+        <button id="send-whatsapp-btn" class="whatsapp-btn">
+          💬 FINALIZAR NO WHATSAPP
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Quick View Modal -->
-  <div class="cart-overlay" id="quickview-modal" style="display: flex; align-items: center; justify-content: center; padding: 1rem;">
-    <div style="background: var(--bg-surface); border-radius: var(--radius-lg); width: 100%; max-width: 650px; overflow: hidden; position: relative; border: 1px solid var(--border-light); box-shadow: var(--shadow-lg);">
-      <button onclick="closeQuickView()" style="position: absolute; top: 1rem; right: 1rem; z-index: 10; width: 32px; height: 32px; border-radius: 50%; background: var(--bg-subtle); color: var(--text-muted); font-size: 1.1rem;">✕</button>
+  <!-- Quick View Modal (Modeled after SoDella) -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeQuickView()">✕</button>
       
-      <div style="display: grid; grid-template-columns: 1fr 1.2fr;">
-        <div style="background: #F8FAFC; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
-          <img id="modal-img" src="" alt="Produto" style="max-height: 240px; object-fit: contain;" />
-        </div>
-        <div style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span id="modal-category" style="font-size: 0.75rem; font-weight: 700; color: var(--brand-blue); text-transform: uppercase;"></span>
-            <h3 id="modal-title" style="font-size: 1.25rem; font-weight: 800; color: var(--brand-navy); margin: 0.3rem 0 0.8rem 0; line-height: 1.3;"></h3>
-            
-            <div style="margin-bottom: 1rem;">
-              <span id="modal-price-retail" style="font-size: 0.8rem; color: var(--text-dim); text-decoration: line-through;"></span>
-              <div id="modal-price-wholesale" style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 900; color: var(--brand-green);"></div>
-              <span style="font-size: 0.75rem; color: var(--brand-green); font-weight: 700;">Preço Atacado no PIX</span>
-            </div>
+      <div class="modal-image-col">
+        <img id="modal-img" src="" alt="Produto" />
+      </div>
 
-            <ul id="modal-specs" style="list-style: none; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;"></ul>
-          </div>
+      <div class="modal-info-col">
+        <div>
+          <span id="modal-category" class="product-category-name"></span>
+          <h2 id="modal-title" class="modal-title"></h2>
+          <div id="modal-price" class="modal-price"></div>
 
-          <button id="modal-add-btn" class="btn-hero-primary" style="width: 100%; justify-content: center;">
-            🛒 Adicionar ao Carrinho
-          </button>
+          <ul id="modal-specs" style="list-style: none; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-light);">
+            <!-- Specs -->
+          </ul>
         </div>
+
+        <button id="modal-add-btn" class="btn-primary" style="width: 100%;">
+          ADICIONAR À SACOLA
+        </button>
       </div>
     </div>
   </div>
 
   <!-- Floating Speed Dial WhatsApp -->
-  <a href="https://wa.me/5521987680702?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20da%20Celulandia%20Atacadista." target="_blank" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 150; width: 56px; height: 56px; border-radius: 50%; background: var(--brand-whatsapp); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); font-size: 1.8rem; color: white;">
+  <a href="https://wa.me/5521987680702?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20da%20Celulandia%20Atacadista." target="_blank" style="position: fixed; bottom: 2rem; right: 2rem; z-index: 150; width: 56px; height: 56px; border-radius: 50%; background-color: var(--whatsapp-color); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(37,211,102,0.4); font-size: 1.8rem; color: white;">
     💬
   </a>
 
-  <!-- Footer -->
+  <!-- Footer (Modeled after SoDella) -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="brand-wrapper" style="margin-bottom: 1rem;">
-            <img src="public/images/logo-original.png" alt="Logo Celulandia" style="height: 44px; background: white; border-radius: 6px; padding: 2px;" />
-            <div class="brand-info">
-              <span class="brand-title" style="color: white;">CELULANDIA</span>
-              <span class="brand-sub" style="color: #38BDF8;">ATACADISTA</span>
-            </div>
-          </div>
-          <p style="font-size: 0.85rem; color: #94A3B8;">
-            A melhor distribuidora de smartphones, peças para celulares e motos elétricas Bikelandia de Santa Cruz e de todo o Rio de Janeiro.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul class="footer-links">
-            <li><a href="#catalogo" onclick="setCategory('celulares')">📱 Smartphones</a></li>
-            <li><a href="#catalogo" onclick="setCategory('motos')">🛵 Motos Elétricas</a></li>
-            <li><a href="#catalogo" onclick="setCategory('relogios')">⌚ Smartwatches</a></li>
-            <li><a href="#catalogo" onclick="setCategory('fones')">🎧 Fones & Áudio</a></li>
-            <li><a href="#catalogo" onclick="setCategory('pecas')">🔧 Peças & Acessórios</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Atendimento</h4>
-          <ul class="footer-links">
-            <li>💬 (21) 98768-0702</li>
-            <li>📍 Av. Isabel, 07 - Santa Cruz</li>
-            <li>🏙️ Rio de Janeiro - RJ</li>
-            <li>⏰ Seg a Sáb: 08h às 20h</li>
-            <li>⏰ Dom: 09h às 14h</li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Redes Sociais</h4>
-          <a href="https://www.instagram.com/celulandiaatacadista/" target="_blank" style="color: #38BDF8; font-weight: 700; font-size: 0.9rem;">
-            📸 @celulandiaatacadista
-          </a>
-        </div>
+    <div class="footer-content">
+      <div class="footer-col" style="flex: 1.5;">
+        <h3>CELULANDIA ATACADISTA</h3>
+        <p>A melhor distribuidora de peças de celular, smartphones, smartwatches e motos elétricas Bikelandia de Santa Cruz e do Rio de Janeiro.</p>
+        <p style="margin-top: 1rem;"><a href="https://www.instagram.com/celulandiaatacadista/" target="_blank">📸 INSTAGRAM: @CELULANDIAATACADISTA</a></p>
       </div>
 
-      <div class="footer-bottom">
-        <div>© 2026 Celulandia Atacadista • Todos os direitos reservados.</div>
-        <div>Av. Isabel, 07 - Santa Cruz, Rio de Janeiro - RJ</div>
+      <div class="footer-col">
+        <h3>CATEGORIAS</h3>
+        <p><a href="#catalogo" onclick="setCategory('celulares')">SMARTPHONES</a></p>
+        <p><a href="#catalogo" onclick="setCategory('motos')">MOTOS ELÉTRICAS</a></p>
+        <p><a href="#catalogo" onclick="setCategory('fones')">FONES &amp; ÁUDIO</a></p>
+        <p><a href="#catalogo" onclick="setCategory('relogios')">SMARTWATCHES</a></p>
+        <p><a href="#catalogo" onclick="setCategory('pecas')">PEÇAS &amp; ACESSÓRIOS</a></p>
       </div>
+
+      <div class="footer-col">
+        <h3>ATENDIMENTO</h3>
+        <p>💬 WHATSAPP: (21) 98768-0702</p>
+        <p>📍 AV. ISABEL, 07 - SANTA CRUZ</p>
+        <p>🏙️ RIO DE JANEIRO - RJ</p>
+        <p>⏰ SEG A SÁB: 08H ÀS 20H</p>
+        <p>⏰ DOM: 09H ÀS 14H</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 CELULANDIA ATACADISTA • TODOS OS DIREITOS RESERVADOS.</div>
+      <div>AV. ISABEL, 07 - SANTA CRUZ, RIO DE JANEIRO - RJ</div>
     </div>
   </footer>
 

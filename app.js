@@ -1,54 +1,13 @@
 /* ==========================================================================
-   CELULANDIA ATACADISTA - APPLICATION LOGIC
-   WhatsApp Cart, Products Engine, Filters & Modal
+   CELULANDIA ATACADISTA - MODELED AFTER SODELLA STORE JS ENGINE
+   WhatsApp Smart Cart, Filters & QuickView Modal
    ========================================================================== */
 
 const WHATSAPP_NUMBER = "5521987680702";
 
 // Products Catalog Data
 const PRODUCTS = [
-  // SMARTWATCHES REAL STORE PRODUCTS
-  {
-    id: "watch-ultra-black",
-    name: "Smartwatch Ultra 49mm Titanium Black + Indução",
-    category: "relogios",
-    priceRetail: 190,
-    priceWholesale: 99.90,
-    image: "images/smartwatch-ultra-black.png",
-    badge: "🔥 Campeão Vendas",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 142,
-    specs: ["Caixa 49mm Titanium Black", "Carregador por Indução Magnético", "Faz e Recebe Chamadas Bluetooth", "Caixa Lacrada"]
-  },
-  {
-    id: "watch-ultra-kit5",
-    name: "Kit Smartwatch Ultra 49mm com 5 Pulseiras + Bumpers Protetores",
-    category: "relogios",
-    priceRetail: 250,
-    priceWholesale: 129.90,
-    image: "images/smartwatch-ultra-kit5.png",
-    badge: "🎁 Kit 5 em 1",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 198,
-    specs: ["5 Pulseiras Ocean (Várias Cores)", "Acompanha Case Bumper 49mm", "Sensores Cardíacos e Esportivos", "Pronta Entrega Atacado"]
-  },
-  {
-    id: "watch-ultra-gold",
-    name: "Smartwatch Ultra Gold 18K Luxury Edition + 2 Pulseiras",
-    category: "relogios",
-    priceRetail: 290,
-    priceWholesale: 149.90,
-    image: "images/smartwatch-ultra-gold.png",
-    badge: "👑 Edição Luxo Ouro",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 86,
-    specs: ["Acabamento em Ouro Dourado 18K", "Pulseira Metálica Ouro + Silicone Preta", "Chave Ajustadora de Elos", "Estojo de Presente Premium"]
-  },
-
-  // MOTOS ELÉTRICAS
+  // MOTOS ELÉTRICAS BIKELANDIA
   {
     id: "moto-1",
     name: "Scooter Elétrica Celulandia Tricolor Edition",
@@ -56,11 +15,8 @@ const PRODUCTS = [
     priceRetail: 4500,
     priceWholesale: 3890,
     image: "images/moto-e-1.png",
-    badge: "Destaque Atacado",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 24,
-    specs: ["Motor 1000W", "Bateria Lítio 60V", "Autonomia 45km", "Painel Digital LED"]
+    badge: "DESTAQUE BIKELANDIA",
+    specs: ["Motor 1000W High Torque", "Bateria Lítio Removível 60V", "Autonomia até 45km", "Painel Digital LED"]
   },
   {
     id: "moto-2",
@@ -69,11 +25,8 @@ const PRODUCTS = [
     priceRetail: 4990,
     priceWholesale: 4290,
     image: "images/moto-e-2.png",
-    badge: "Mais Vendida",
-    badgeClass: "destaque",
-    rating: 4.9,
-    reviews: 31,
-    specs: ["Motor 1200W", "Retro Design", "Freio a Disco ABS", "Suporte para Capacete"]
+    badge: "MAIS VENDIDA",
+    specs: ["Motor 1200W Potente", "Design Retro Clássico", "Freio a Disco ABS", "Suporte para Capacete"]
   },
   {
     id: "moto-3",
@@ -82,11 +35,8 @@ const PRODUCTS = [
     priceRetail: 5800,
     priceWholesale: 4990,
     image: "images/moto-e-3.png",
-    badge: "Super Potência",
-    badgeClass: "atacado",
-    rating: 5.0,
-    reviews: 19,
-    specs: ["Pneu Largo Off-Road", "Motor 1500W", "Bateria Removível 20Ah", "Amortecedor Duplo"]
+    badge: "SUPER POTÊNCIA",
+    specs: ["Pneu Largo Off-Road Fat Tire", "Motor 1500W Ultra", "Bateria Removível 20Ah", "Amortecedor Duplo Reinforçado"]
   },
 
   // SMARTPHONES REAL STORE PRODUCTS
@@ -97,11 +47,8 @@ const PRODUCTS = [
     priceRetail: 890,
     priceWholesale: 680,
     image: "images/poco-c71.png",
-    badge: "🔥 Sucesso Atacado",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 78,
-    specs: ["Cores: Azul, Preto, Prata", "Versão Global Lacrada", "Processador Octa-Core", "Garantia de Loja"]
+    badge: "🔥 CAMPEÃO ATACADO",
+    specs: ["Cores: Azul, Preto, Prata", "Versão Global Lacrada na Caixa", "Processador Octa-Core", "Garantia de Loja"]
   },
   {
     id: "phone-realme-note-60x",
@@ -110,11 +57,8 @@ const PRODUCTS = [
     priceRetail: 850,
     priceWholesale: 640,
     image: "images/realme-note-60x.png",
-    badge: "✨ Novo no Estoque",
-    badgeClass: "destaque",
-    rating: 4.9,
-    reviews: 52,
-    specs: ["Cores: Preto & Verde Mint", "Bateria 5000mAh", "Super Custo-Benefício", "Caixa Original"]
+    badge: "✨ NOVO NO ESTOQUE",
+    specs: ["Cores: Preto & Verde Mint", "Bateria 5000mAh de Longa Duração", "Super Custo-Benefício Atacadista", "Caixa Original"]
   },
   {
     id: "phone-1",
@@ -123,11 +67,40 @@ const PRODUCTS = [
     priceRetail: 7100,
     priceWholesale: 6290,
     image: "images/iphone-15.jpg",
-    badge: "Lançamento Apple",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 42,
-    specs: ["Chip A17 Pro", "Câmera 48MP Zoom 5x", "Super Retina XDR", "Garantia Apple 1 Ano"]
+    badge: "LANÇAMENTO APPLE",
+    specs: ["Chip A17 Pro Bionic", "Câmera 48MP Zoom 5x", "Super Retina XDR OLED", "Garantia Oficial Apple 1 Ano"]
+  },
+
+  // SMARTWATCHES REAL STORE PRODUCTS
+  {
+    id: "watch-ultra-black",
+    name: "Smartwatch Ultra 49mm Titanium Black + Indução",
+    category: "relogios",
+    priceRetail: 190,
+    priceWholesale: 99.90,
+    image: "images/smartwatch-ultra-black.png",
+    badge: "🔥 TOP VENDAS",
+    specs: ["Caixa 49mm Titanium Black", "Carregador Magnético por Indução", "Faz e Recebe Chamadas Bluetooth", "Caixa Lacrada"]
+  },
+  {
+    id: "watch-ultra-kit5",
+    name: "Kit Smartwatch Ultra 49mm com 5 Pulseiras + Bumpers",
+    category: "relogios",
+    priceRetail: 250,
+    priceWholesale: 129.90,
+    image: "images/smartwatch-ultra-kit5.png",
+    badge: "🎁 KIT 5 EM 1",
+    specs: ["5 Pulseiras Ocean (Preta, Laranja, Amarela, Verde, Menta)", "Case Bumper 49mm Incluso", "Sensores Cardíacos e Esportivos", "Pronta Entrega Atacado"]
+  },
+  {
+    id: "watch-ultra-gold",
+    name: "Smartwatch Ultra Gold 18K Luxury Edition + 2 Pulseiras",
+    category: "relogios",
+    priceRetail: 290,
+    priceWholesale: 149.90,
+    image: "images/smartwatch-ultra-gold.png",
+    badge: "👑 EDIÇÃO LUXO OURO",
+    specs: ["Acabamento em Ouro Dourado 18K", "Pulseira Metálica Ouro + Silicone Preta", "Chave Ajustadora de Elos", "Estojo Presenteável Premium"]
   },
 
   // FONES & ÁUDIO REAL STORE PRODUCTS
@@ -138,11 +111,8 @@ const PRODUCTS = [
     priceRetail: 55,
     priceWholesale: 22.90,
     image: "images/airdots-tws.png",
-    badge: "🔥 Campeão Vendas",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 165,
-    specs: ["Bluetooth v5.1 High Speed", "Estojo de Carregamento", "Touch Control Inteligente", "Atacado por Unidade"]
+    badge: "🔥 CAMPEÃO VENDAS",
+    specs: ["Bluetooth v5.1 High Speed", "Estojo de Carregamento sem Fio", "Touch Control Inteligente", "Atacado por Unidade"]
   },
   {
     id: "audio-jbl-jb950",
@@ -151,10 +121,7 @@ const PRODUCTS = [
     priceRetail: 89,
     priceWholesale: 38.90,
     image: "images/jbl-everest-jb950.png",
-    badge: "🎧 Super Bass",
-    badgeClass: "destaque",
-    rating: 4.9,
-    reviews: 94,
+    badge: "🎧 SUPER BASS",
     specs: ["Rádio FM & Leitor Cartão MicroSD", "Microfone Noise Reduction", "Dobrável e Ajustável", "Várias Cores"]
   },
   {
@@ -164,27 +131,21 @@ const PRODUCTS = [
     priceRetail: 60,
     priceWholesale: 24.90,
     image: "images/headphone-p47.png",
-    badge: "⚡ Top Atacado",
-    badgeClass: "atacado",
-    rating: 4.8,
-    reviews: 82,
+    badge: "⚡ TOP ATACADO",
     specs: ["Bluetooth 5.0+EDR", "Haste Regulável Dobrável", "Atendimento de Chamadas", "Excelente Graves"]
   },
   {
     id: "audio-bluestar-earx",
-    name: "Fone de Ouvido Blue Star EarX com Fio (Conector Lightning / iOS)",
+    name: "Fone Blue Star EarX com Fio (Conector Lightning / iOS)",
     category: "fones",
     priceRetail: 35,
     priceWholesale: 14.90,
     image: "images/fone-bluestar-earx.png",
-    badge: "📱 Para iPhone",
-    badgeClass: "atacado",
-    rating: 4.9,
-    reviews: 110,
+    badge: "📱 PARA IPHONE",
     specs: ["Conector Lightning para iPhone", "Controle de Volume no Cabo", "Microfone Embutido", "Áudio HD Hi-Fi"]
   },
 
-  // PEÇAS & ACESSÓRIOS
+  // PEÇAS & ACESSÓRIOS REAL STORE PRODUCTS
   {
     id: "part-capas-coloridas",
     name: "Capas de Silicone Coloridas Anti-Impacto para Celular",
@@ -192,11 +153,8 @@ const PRODUCTS = [
     priceRetail: 25,
     priceWholesale: 8.90,
     image: "images/capas-celular.png",
-    badge: "🏷️ Atacado Acessórios",
-    badgeClass: "atacado",
-    rating: 5.0,
-    reviews: 142,
-    specs: ["Preço Atacado por Unidade", "Cores: Roxo, Vermelho, Azul, Rosa, Grafite", "Proteção de Câmera", "Modelos iPhone/Xiaomi/Samsung"]
+    badge: "🏷️ ATACADO ACESSÓRIOS",
+    specs: ["Preço Atacado por Unidade", "Cores: Roxo, Vermelho, Azul, Rosa, Grafite", "Proteção para Câmera", "Modelos iPhone/Xiaomi/Samsung"]
   }
 ];
 
@@ -205,7 +163,7 @@ let cart = JSON.parse(localStorage.getItem('celulandia_cart') || '[]');
 let currentCategory = 'all';
 let searchQuery = '';
 
-// DOM Elements Initialization
+// DOM Initialization
 document.addEventListener('DOMContentLoaded', () => {
   renderCategories();
   renderProducts();
@@ -213,9 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
 });
 
-// Event Listeners
 function setupEventListeners() {
-  // Search Input
   const searchInput = document.getElementById('search-input');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
@@ -224,7 +180,6 @@ function setupEventListeners() {
     });
   }
 
-  // Cart Drawer Triggers
   const openCartBtn = document.getElementById('open-cart-btn');
   const closeCartBtn = document.getElementById('close-cart-btn');
   const cartOverlay = document.getElementById('cart-overlay');
@@ -237,32 +192,30 @@ function setupEventListeners() {
     });
   }
 
-  // Checkout Form Submission
   const checkoutBtn = document.getElementById('send-whatsapp-btn');
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', processCheckout);
   }
 }
 
-// Category Tabs Filter
+// Category Filter Bar Modeled after SoDella
 function renderCategories() {
   const categoriesNav = document.getElementById('categories-nav');
   if (!categoriesNav) return;
 
   const cats = [
-    { id: 'all', label: 'Todos os Produtos', icon: '⚡' },
-    { id: 'relogios', label: 'Smartwatches', icon: '⌚' },
-    { id: 'celulares', label: 'Smartphones', icon: '📱' },
-    { id: 'motos', label: 'Motos Elétricas', icon: '🛵' },
-    { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
-    { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' }
+    { id: 'all', label: 'TODOS OS PRODUTOS' },
+    { id: 'celulares', label: 'SMARTPHONES' },
+    { id: 'motos', label: 'MOTOS ELÉTRICAS' },
+    { id: 'fones', label: 'FONES & ÁUDIO' },
+    { id: 'relogios', label: 'SMARTWATCHES' },
+    { id: 'pecas', label: 'PEÇAS & ACESSÓRIOS' }
   ];
 
   categoriesNav.innerHTML = cats.map(cat => `
-    <button class="cat-btn ${currentCategory === cat.id ? 'active' : ''}" onclick="setCategory('${cat.id}')">
-      <span>${cat.icon}</span>
-      <span>${cat.label}</span>
-    </button>
+    <a href="javascript:void(0)" class="cat-link ${currentCategory === cat.id ? 'active' : ''}" onclick="setCategory('${cat.id}')">
+      ${cat.label}
+    </a>
   `).join('');
 }
 
@@ -272,7 +225,7 @@ function setCategory(catId) {
   renderProducts();
 }
 
-// Render Products Grid
+// Products Grid Renderer Modeled after SoDella
 function renderProducts() {
   const productsGrid = document.getElementById('products-grid');
   if (!productsGrid) return;
@@ -286,10 +239,9 @@ function renderProducts() {
 
   if (filtered.length === 0) {
     productsGrid.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
-        <h3>Nenhum produto encontrado</h3>
-        <p>Tente buscar por outro termo ou selecione uma categoria diferente.</p>
+      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-light);">
+        <h3 style="font-weight: 400; letter-spacing: 2px;">NENHUM PRODUTO ENCONTRADO</h3>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">TENTE BUSCAR POR OUTRO TERMO OU CATEGORIA.</p>
       </div>
     `;
     return;
@@ -297,32 +249,24 @@ function renderProducts() {
 
   productsGrid.innerHTML = filtered.map(prod => `
     <div class="product-card">
-      <span class="product-badge ${prod.badgeClass}">${prod.badge}</span>
-      
-      <div class="product-img-wrapper">
-        <img src="${prod.image}" alt="${prod.name}" loading="lazy" />
-        <button class="quick-view-btn" onclick="openQuickView('${prod.id}')">Espiar Detalhes 👁️</button>
+      <div class="product-image-wrapper">
+        <span class="product-badge-tag">${prod.badge}</span>
+        <img src="${prod.image}" alt="${prod.name}" class="product-image" loading="lazy" />
+        <button class="product-quickview-btn" onclick="openQuickView('${prod.id}')">ESPIAR DETALHES 👁️</button>
       </div>
 
-      <div class="product-details">
-        <div class="product-category">${getCategoryLabel(prod.category)}</div>
+      <div class="product-info">
+        <div class="product-category-name">${getCategoryLabel(prod.category)}</div>
         <h3 class="product-title">${prod.name}</h3>
         
-        <div class="product-specs">
-          ${prod.specs.slice(0, 3).map(s => `<span class="spec-pill">${s}</span>`).join('')}
+        <div class="product-price">
+          <span class="product-retail-price">R$ ${prod.priceRetail.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+          R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})}
         </div>
 
-        <div class="product-pricing">
-          <div class="price-box">
-            <span class="price-retail">Varejo: R$ ${prod.priceRetail.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
-            <span class="price-wholesale">R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
-            <span class="price-label">Preço Atacado no PIX</span>
-          </div>
-
-          <button class="add-cart-btn" onclick="addToCart('${prod.id}')" title="Adicionar ao Carrinho">
-            🛒
-          </button>
-        </div>
+        <button class="btn-add-cart-card" onclick="addToCart('${prod.id}')">
+          ADICIONAR À SACOLA 🛒
+        </button>
       </div>
     </div>
   `).join('');
@@ -330,16 +274,16 @@ function renderProducts() {
 
 function getCategoryLabel(cat) {
   const map = {
-    motos: 'Moto Elétrica',
-    celulares: 'Smartphone',
-    fones: 'Fones & Som',
-    relogios: 'Smartwatch',
-    pecas: 'Peças & Acessórios'
+    motos: 'MOTO ELÉTRICA BIKELANDIA',
+    celulares: 'SMARTPHONE',
+    fones: 'FONES & ÁUDIO',
+    relogios: 'SMARTWATCH',
+    pecas: 'PEÇAS & ACESSÓRIOS'
   };
-  return map[cat] || cat;
+  return map[cat] || cat.toUpperCase();
 }
 
-// Cart Functions
+// Cart Management Modeled after SoDella
 function addToCart(productId) {
   const prod = PRODUCTS.find(p => p.id === productId);
   if (!prod) return;
@@ -359,7 +303,7 @@ function addToCart(productId) {
 
   saveCart();
   updateCartBadge();
-  showToast(`"${prod.name}" adicionado ao carrinho!`);
+  showToast(`"${prod.name}" ADICIONADO À SACOLA!`);
 }
 
 function updateCartQty(productId, delta) {
@@ -397,35 +341,35 @@ function updateCartBadge() {
 
 function openCart() {
   const overlay = document.getElementById('cart-overlay');
-  if (overlay) {
+  const sidebar = document.querySelector('.cart-sidebar');
+  if (overlay && sidebar) {
     renderCartItems();
-    overlay.classList.add('active');
+    overlay.classList.add('open');
+    sidebar.classList.add('open');
   }
 }
 
 function closeCart() {
   const overlay = document.getElementById('cart-overlay');
-  if (overlay) {
-    overlay.classList.remove('active');
+  const sidebar = document.querySelector('.cart-sidebar');
+  if (overlay && sidebar) {
+    overlay.classList.remove('open');
+    sidebar.classList.remove('open');
   }
 }
 
 function renderCartItems() {
   const container = document.getElementById('cart-items-body');
-  const subtotalEl = document.getElementById('cart-subtotal');
   const totalEl = document.getElementById('cart-total');
 
   if (!container) return;
 
   if (cart.length === 0) {
     container.innerHTML = `
-      <div class="cart-empty-state">
-        <div class="cart-empty-icon">🛍️</div>
-        <h3>Seu carrinho está vazio</h3>
-        <p>Escolha produtos em nosso catálogo de atacado!</p>
+      <div style="text-align: center; padding: 3rem 1rem; color: var(--text-light);">
+        <p style="font-size: 1rem; letter-spacing: 1px; text-transform: uppercase;">SUA SACOLA ESTÁ VAZIA</p>
       </div>
     `;
-    if (subtotalEl) subtotalEl.textContent = 'R$ 0,00';
     if (totalEl) totalEl.textContent = 'R$ 0,00';
     return;
   }
@@ -434,28 +378,27 @@ function renderCartItems() {
 
   container.innerHTML = cart.map(item => `
     <div class="cart-item">
-      <img src="${item.image}" alt="${item.name}" class="cart-item-img" />
-      <div class="cart-item-info">
-        <div class="cart-item-name">${item.name}</div>
+      <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
+      <div class="cart-item-details">
+        <div class="cart-item-title">${item.name}</div>
         <div class="cart-item-price">R$ ${item.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
         <div class="cart-item-qty">
           <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)">-</button>
-          <span style="font-weight: 800; font-size: 0.9rem;">${item.qty}</span>
+          <span style="font-weight: 700;">${item.qty}</span>
           <button class="qty-btn" onclick="updateCartQty('${item.id}', 1)">+</button>
-          <button style="margin-left: auto; color: #ef4444; font-size: 0.8rem;" onclick="removeFromCart('${item.id}')">Excluir</button>
+          <button class="cart-remove" style="margin-left: auto;" onclick="removeFromCart('${item.id}')">REMOVER</button>
         </div>
       </div>
     </div>
   `).join('');
 
-  if (subtotalEl) subtotalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
   if (totalEl) totalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
 }
 
 // WhatsApp Checkout Generator
 function processCheckout() {
   if (cart.length === 0) {
-    alert("Adicione pelo menos um produto ao seu carrinho para finalizar o pedido!");
+    alert("ADICIONE PELO MENOS UM PRODUTO À SUA SACOLA!");
     return;
   }
 
@@ -470,7 +413,7 @@ function processCheckout() {
   const orderNotes = noteInput ? noteInput.value.trim() : "";
 
   if (!customerName) {
-    alert("Por favor, digite seu nome completo para prosseguir com o pedido.");
+    alert("POR FAVOR, DIGITE SEU NOME COMPLETO PARA FINALIZAR.");
     if (nameInput) nameInput.focus();
     return;
   }
@@ -515,8 +458,7 @@ function openQuickView(productId) {
   modal.querySelector('#modal-img').src = prod.image;
   modal.querySelector('#modal-title').textContent = prod.name;
   modal.querySelector('#modal-category').textContent = getCategoryLabel(prod.category);
-  modal.querySelector('#modal-price-wholesale').textContent = `R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
-  modal.querySelector('#modal-price-retail').textContent = `R$ ${prod.priceRetail.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+  modal.querySelector('#modal-price').textContent = `R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})} ATACADO NO PIX`;
   
   const specsBox = modal.querySelector('#modal-specs');
   if (specsBox) {
@@ -532,12 +474,12 @@ function openQuickView(productId) {
     };
   }
 
-  modal.classList.add('active');
+  modal.classList.add('open');
 }
 
 function closeQuickView() {
   const modal = document.getElementById('quickview-modal');
-  if (modal) modal.classList.remove('active');
+  if (modal) modal.classList.remove('open');
 }
 
 // Toast Notifications
@@ -552,7 +494,7 @@ function showToast(msg) {
 
   const toast = document.createElement('div');
   toast.className = 'toast';
-  toast.innerHTML = `<span>✅</span> <span>${msg}</span>`;
+  toast.innerHTML = `<span>${msg}</span>`;
   container.appendChild(toast);
 
   setTimeout(() => {
