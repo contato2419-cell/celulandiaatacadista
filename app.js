@@ -7,6 +7,47 @@ const WHATSAPP_NUMBER = "5521987680702";
 
 // Products Catalog Data
 const PRODUCTS = [
+  // SMARTWATCHES REAL STORE PRODUCTS
+  {
+    id: "watch-ultra-black",
+    name: "Smartwatch Ultra 49mm Titanium Black + Indução",
+    category: "relogios",
+    priceRetail: 190,
+    priceWholesale: 99.90,
+    image: "images/smartwatch-ultra-black.png",
+    badge: "🔥 Campeão Vendas",
+    badgeClass: "destaque",
+    rating: 5.0,
+    reviews: 142,
+    specs: ["Caixa 49mm Titanium Black", "Carregador por Indução Magnético", "Faz e Recebe Chamadas Bluetooth", "Caixa Lacrada"]
+  },
+  {
+    id: "watch-ultra-kit5",
+    name: "Kit Smartwatch Ultra 49mm com 5 Pulseiras + Bumpers Protetores",
+    category: "relogios",
+    priceRetail: 250,
+    priceWholesale: 129.90,
+    image: "images/smartwatch-ultra-kit5.png",
+    badge: "🎁 Kit 5 em 1",
+    badgeClass: "destaque",
+    rating: 5.0,
+    reviews: 198,
+    specs: ["5 Pulseiras Ocean (Várias Cores)", "Acompanha Case Bumper 49mm", "Sensores Cardíacos e Esportivos", "Pronta Entrega Atacado"]
+  },
+  {
+    id: "watch-ultra-gold",
+    name: "Smartwatch Ultra Gold 18K Luxury Edition + 2 Pulseiras",
+    category: "relogios",
+    priceRetail: 290,
+    priceWholesale: 149.90,
+    image: "images/smartwatch-ultra-gold.png",
+    badge: "👑 Edição Luxo Ouro",
+    badgeClass: "destaque",
+    rating: 5.0,
+    reviews: 86,
+    specs: ["Acabamento em Ouro Dourado 18K", "Pulseira Metálica Ouro + Silicone Preta", "Chave Ajustadora de Elos", "Estojo de Presente Premium"]
+  },
+
   // MOTOS ELÉTRICAS
   {
     id: "moto-1",
@@ -156,34 +197,6 @@ const PRODUCTS = [
     rating: 5.0,
     reviews: 142,
     specs: ["Preço Atacado por Unidade", "Cores: Roxo, Vermelho, Azul, Rosa, Grafite", "Proteção de Câmera", "Modelos iPhone/Xiaomi/Samsung"]
-  },
-  {
-    id: "part-1",
-    name: "Tela Frontal OLED iPhone 11/12/13/14 (Premium Grade)",
-    category: "pecas",
-    priceRetail: 180,
-    priceWholesale: 120,
-    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
-    badge: "Peça de Reposição",
-    badgeClass: "atacado",
-    rating: 4.8,
-    reviews: 110,
-    specs: ["Tecnologia OLED", "Tacto 3D Responsivo", "Certificação Original", "Para Assistências"]
-  },
-
-  // SMARTWATCHES
-  {
-    id: "watch-1",
-    name: "Smartwatch Ultra 8 Titanium Edition NFC",
-    category: "relogios",
-    priceRetail: 220,
-    priceWholesale: 139,
-    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
-    badge: "Top Vendas",
-    badgeClass: "destaque",
-    rating: 4.9,
-    reviews: 88,
-    specs: ["Caixa 49mm Titânio", "Faz e Recebe Chamadas", "Sensor ECG & Frequência", "Resistente à Água"]
   }
 ];
 
@@ -238,11 +251,11 @@ function renderCategories() {
 
   const cats = [
     { id: 'all', label: 'Todos os Produtos', icon: '⚡' },
-    { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
+    { id: 'relogios', label: 'Smartwatches', icon: '⌚' },
     { id: 'celulares', label: 'Smartphones', icon: '📱' },
     { id: 'motos', label: 'Motos Elétricas', icon: '🛵' },
-    { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' },
-    { id: 'relogios', label: 'Smartwatches', icon: '⌚' }
+    { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
+    { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' }
   ];
 
   categoriesNav.innerHTML = cats.map(cat => `
