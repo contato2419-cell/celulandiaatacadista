@@ -88,18 +88,59 @@ const PRODUCTS = [
     reviews: 42,
     specs: ["Chip A17 Pro", "Câmera 48MP Zoom 5x", "Super Retina XDR", "Garantia Apple 1 Ano"]
   },
+
+  // FONES & ÁUDIO REAL STORE PRODUCTS
   {
-    id: "phone-2",
-    name: "Xiaomi Redmi Note 13 Pro 5G 256GB / 8GB RAM",
-    category: "celulares",
-    priceRetail: 1690,
-    priceWholesale: 1390,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
-    badge: "Campeão Vendas",
+    id: "audio-airdots",
+    name: "Fone de Ouvido TWS AirDots Bluetooth 5.1 sem Fio",
+    category: "fones",
+    priceRetail: 55,
+    priceWholesale: 22.90,
+    image: "images/airdots-tws.png",
+    badge: "🔥 Campeão Vendas",
+    badgeClass: "destaque",
+    rating: 5.0,
+    reviews: 165,
+    specs: ["Bluetooth v5.1 High Speed", "Estojo de Carregamento", "Touch Control Inteligente", "Atacado por Unidade"]
+  },
+  {
+    id: "audio-jbl-jb950",
+    name: "Headset Bluetooth JBL Everest JB950 Wireless FM/MP3",
+    category: "fones",
+    priceRetail: 89,
+    priceWholesale: 38.90,
+    image: "images/jbl-everest-jb950.png",
+    badge: "🎧 Super Bass",
+    badgeClass: "destaque",
+    rating: 4.9,
+    reviews: 94,
+    specs: ["Rádio FM & Leitor Cartão MicroSD", "Microfone Noise Reduction", "Dobrável e Ajustável", "Várias Cores"]
+  },
+  {
+    id: "audio-p47",
+    name: "Headphone Wireless P47 5.0+EDR Dobrável Bluetooth",
+    category: "fones",
+    priceRetail: 60,
+    priceWholesale: 24.90,
+    image: "images/headphone-p47.png",
+    badge: "⚡ Top Atacado",
     badgeClass: "atacado",
     rating: 4.8,
-    reviews: 56,
-    specs: ["Câmera 200MP", "Carregamento 67W", "Tela AMOLED 1.5K", "Versão Global"]
+    reviews: 82,
+    specs: ["Bluetooth 5.0+EDR", "Haste Regulável Dobrável", "Atendimento de Chamadas", "Excelente Graves"]
+  },
+  {
+    id: "audio-bluestar-earx",
+    name: "Fone de Ouvido Blue Star EarX com Fio (Conector Lightning / iOS)",
+    category: "fones",
+    priceRetail: 35,
+    priceWholesale: 14.90,
+    image: "images/fone-bluestar-earx.png",
+    badge: "📱 Para iPhone",
+    badgeClass: "atacado",
+    rating: 4.9,
+    reviews: 110,
+    specs: ["Conector Lightning para iPhone", "Controle de Volume no Cabo", "Microfone Embutido", "Áudio HD Hi-Fi"]
   },
 
   // PEÇAS & ACESSÓRIOS
@@ -128,21 +169,6 @@ const PRODUCTS = [
     rating: 4.8,
     reviews: 110,
     specs: ["Tecnologia OLED", "Tacto 3D Responsivo", "Certificação Original", "Para Assistências"]
-  },
-
-  // FONES & ÁUDIO
-  {
-    id: "audio-1",
-    name: "AirPods Pro 2ª Gen com Cancelamento de Ruído MagSafe",
-    category: "fones",
-    priceRetail: 650,
-    priceWholesale: 480,
-    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=600&q=80",
-    badge: "Super Som",
-    badgeClass: "atacado",
-    rating: 4.9,
-    reviews: 64,
-    specs: ["Cancelamento Ativo ANC", "Áudio Espacial 3D", "Estojo Magsafe", "Touch Control"]
   },
 
   // SMARTWATCHES
@@ -212,10 +238,10 @@ function renderCategories() {
 
   const cats = [
     { id: 'all', label: 'Todos os Produtos', icon: '⚡' },
+    { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
     { id: 'celulares', label: 'Smartphones', icon: '📱' },
     { id: 'motos', label: 'Motos Elétricas', icon: '🛵' },
     { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' },
-    { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
     { id: 'relogios', label: 'Smartwatches', icon: '⌚' }
   ];
 
