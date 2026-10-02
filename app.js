@@ -48,19 +48,45 @@ const PRODUCTS = [
     specs: ["Pneu Largo Off-Road", "Motor 1500W", "Bateria Removível 20Ah", "Amortecedor Duplo"]
   },
 
-  // SMARTPHONES
+  // SMARTPHONES REAL STORE PRODUCTS
+  {
+    id: "phone-poco-c71",
+    name: "Smartphone POCO C71 (Xiaomi) Lacrado - Várias Cores",
+    category: "celulares",
+    priceRetail: 890,
+    priceWholesale: 680,
+    image: "images/poco-c71.png",
+    badge: "🔥 Sucesso Atacado",
+    badgeClass: "destaque",
+    rating: 5.0,
+    reviews: 78,
+    specs: ["Cores: Azul, Preto, Prata", "Versão Global Lacrada", "Processador Octa-Core", "Garantia de Loja"]
+  },
+  {
+    id: "phone-realme-note-60x",
+    name: "Smartphone realme Note 60x - Preto e Verde Mint",
+    category: "celulares",
+    priceRetail: 850,
+    priceWholesale: 640,
+    image: "images/realme-note-60x.png",
+    badge: "✨ Novo no Estoque",
+    badgeClass: "destaque",
+    rating: 4.9,
+    reviews: 52,
+    specs: ["Cores: Preto & Verde Mint", "Bateria 5000mAh", "Super Custo-Benefício", "Caixa Original"]
+  },
   {
     id: "phone-1",
-    name: "Apple iPhone 15 Pro Max 256GB Titanium",
+    name: "Apple iPhone 15 Pro Max 256GB Titanium Blue",
     category: "celulares",
     priceRetail: 7100,
     priceWholesale: 6290,
     image: "images/iphone-15.jpg",
-    badge: "Lançamento",
+    badge: "Lançamento Apple",
     badgeClass: "destaque",
     rating: 5.0,
     reviews: 42,
-    specs: ["Chip A17 Pro", "Câmera 48MP Zoom 5x", "Tela Super Retina XDR 120Hz", "Garantia Apple"]
+    specs: ["Chip A17 Pro", "Câmera 48MP Zoom 5x", "Super Retina XDR", "Garantia Apple 1 Ano"]
   },
   {
     id: "phone-2",
@@ -69,24 +95,39 @@ const PRODUCTS = [
     priceRetail: 1690,
     priceWholesale: 1390,
     image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
-    badge: "Campeão Atacado",
+    badge: "Campeão Vendas",
     badgeClass: "atacado",
     rating: 4.8,
     reviews: 56,
     specs: ["Câmera 200MP", "Carregamento 67W", "Tela AMOLED 1.5K", "Versão Global"]
   },
+
+  // PEÇAS & ACESSÓRIOS
   {
-    id: "phone-3",
-    name: "Samsung Galaxy S24 Ultra 512GB AI Titanium",
-    category: "celulares",
-    priceRetail: 5990,
-    priceWholesale: 5190,
-    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
-    badge: "Linha Premium",
-    badgeClass: "destaque",
-    rating: 4.9,
-    reviews: 38,
-    specs: ["Galaxy AI Integrada", "Caneta S-Pen", "Zoom Óptico 10x", "Quad HD+"]
+    id: "part-capas-coloridas",
+    name: "Capas de Silicone Coloridas Anti-Impacto para Celular",
+    category: "pecas",
+    priceRetail: 25,
+    priceWholesale: 8.90,
+    image: "images/capas-celular.png",
+    badge: "🏷️ Atacado Acessórios",
+    badgeClass: "atacado",
+    rating: 5.0,
+    reviews: 142,
+    specs: ["Preço Atacado por Unidade", "Cores: Roxo, Vermelho, Azul, Rosa, Grafite", "Proteção de Câmera", "Modelos iPhone/Xiaomi/Samsung"]
+  },
+  {
+    id: "part-1",
+    name: "Tela Frontal OLED iPhone 11/12/13/14 (Premium Grade)",
+    category: "pecas",
+    priceRetail: 180,
+    priceWholesale: 120,
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+    badge: "Peça de Reposição",
+    badgeClass: "atacado",
+    rating: 4.8,
+    reviews: 110,
+    specs: ["Tecnologia OLED", "Tacto 3D Responsivo", "Certificação Original", "Para Assistências"]
   },
 
   // FONES & ÁUDIO
@@ -103,19 +144,6 @@ const PRODUCTS = [
     reviews: 64,
     specs: ["Cancelamento Ativo ANC", "Áudio Espacial 3D", "Estojo Magsafe", "Touch Control"]
   },
-  {
-    id: "audio-2",
-    name: "Headset Gamer Wireless Surround 7.1 Celulandia",
-    category: "fones",
-    priceRetail: 180,
-    priceWholesale: 119,
-    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
-    badge: "Linha Gamer",
-    badgeClass: "atacado",
-    rating: 4.7,
-    reviews: 29,
-    specs: ["Microfone Noise Cancelling", "RGB LED Dynamic", "Bateria 24h", "Compatível PS5/PC"]
-  },
 
   // SMARTWATCHES
   {
@@ -130,47 +158,6 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 88,
     specs: ["Caixa 49mm Titânio", "Faz e Recebe Chamadas", "Sensor ECG & Frequência", "Resistente à Água"]
-  },
-  {
-    id: "watch-2",
-    name: "Apple Watch Series 9 GPS 45mm Caixa de Alumínio",
-    category: "relogios",
-    priceRetail: 2890,
-    priceWholesale: 2390,
-    image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
-    badge: "Original Apple",
-    badgeClass: "destaque",
-    rating: 5.0,
-    reviews: 47,
-    specs: ["Gesto Toque Duplo", "Tela Retina Sempre Ativa", "Siri Mais Rápida", "ECG Avançado"]
-  },
-
-  // PEÇAS & ACESSÓRIOS
-  {
-    id: "part-1",
-    name: "Tela Frontal OLED iPhone 11/12/13/14 (Premium Grade)",
-    category: "pecas",
-    priceRetail: 180,
-    priceWholesale: 120,
-    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
-    badge: "Peça de Reposição",
-    badgeClass: "atacado",
-    rating: 4.8,
-    reviews: 110,
-    specs: ["Tecnologia OLED", "Tacto 3D Responsivo", "Certificação Original", "Para Assistências"]
-  },
-  {
-    id: "part-2",
-    name: "Carregador Turbo 67W GaN + Cabo USB-C Celulandia",
-    category: "pecas",
-    priceRetail: 85,
-    priceWholesale: 45,
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
-    badge: "Turbo Power",
-    badgeClass: "atacado",
-    rating: 4.9,
-    reviews: 95,
-    specs: ["Tecnologia GaN Fast", "Dupla Saída C + USB", "Proteção Contra Sobrecarga", "Garantia 6 Meses"]
   }
 ];
 
@@ -225,11 +212,11 @@ function renderCategories() {
 
   const cats = [
     { id: 'all', label: 'Todos os Produtos', icon: '⚡' },
-    { id: 'motos', label: 'Motos Elétricas', icon: '🛵' },
     { id: 'celulares', label: 'Smartphones', icon: '📱' },
+    { id: 'motos', label: 'Motos Elétricas', icon: '🛵' },
+    { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' },
     { id: 'fones', label: 'Fones & Áudio', icon: '🎧' },
-    { id: 'relogios', label: 'Smartwatches', icon: '⌚' },
-    { id: 'pecas', label: 'Peças & Acessórios', icon: '🔧' }
+    { id: 'relogios', label: 'Smartwatches', icon: '⌚' }
   ];
 
   categoriesNav.innerHTML = cats.map(cat => `
@@ -288,8 +275,8 @@ function renderProducts() {
 
         <div class="product-pricing">
           <div class="price-box">
-            <span class="price-retail">Varejo: R$ ${prod.priceRetail.toLocaleString('pt-BR')}</span>
-            <span class="price-wholesale">R$ ${prod.priceWholesale.toLocaleString('pt-BR')}</span>
+            <span class="price-retail">Varejo: R$ ${prod.priceRetail.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+            <span class="price-wholesale">R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
             <span class="price-label">Preço Atacado no PIX</span>
           </div>
 
@@ -411,7 +398,7 @@ function renderCartItems() {
       <img src="${item.image}" alt="${item.name}" class="cart-item-img" />
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-price">R$ ${item.price.toLocaleString('pt-BR')}</div>
+        <div class="cart-item-price">R$ ${item.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
         <div class="cart-item-qty">
           <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)">-</button>
           <span style="font-weight: 800; font-size: 0.9rem;">${item.qty}</span>
@@ -422,8 +409,8 @@ function renderCartItems() {
     </div>
   `).join('');
 
-  if (subtotalEl) subtotalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR')}`;
-  if (totalEl) totalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR')}`;
+  if (subtotalEl) subtotalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+  if (totalEl) totalEl.textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
 }
 
 // WhatsApp Checkout Generator
@@ -464,11 +451,11 @@ function processCheckout() {
     const itemTotal = item.price * item.qty;
     grandTotal += itemTotal;
     text += `${idx + 1}. *${item.name}*\n`;
-    text += `   ↳ Qtd: ${item.qty}x | Unit: R$ ${item.price.toLocaleString('pt-BR')} | Subtotal: *R$ ${itemTotal.toLocaleString('pt-BR')}*\n`;
+    text += `   ↳ Qtd: ${item.qty}x | Unit: R$ ${item.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})} | Subtotal: *R$ ${itemTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}*\n`;
   });
 
   text += `\n━━━━━━━━━━━━━━━━━━━━━━\n`;
-  text += `💰 *VALOR TOTAL: R$ ${grandTotal.toLocaleString('pt-BR')}*\n`;
+  text += `💰 *VALOR TOTAL: R$ ${grandTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}*\n`;
   text += `━━━━━━━━━━━━━━━━━━━━━━\n\n`;
   text += `Gostaria de confirmar a disponibilidade dos itens e dados de envio!`;
 
@@ -489,8 +476,8 @@ function openQuickView(productId) {
   modal.querySelector('#modal-img').src = prod.image;
   modal.querySelector('#modal-title').textContent = prod.name;
   modal.querySelector('#modal-category').textContent = getCategoryLabel(prod.category);
-  modal.querySelector('#modal-price-wholesale').textContent = `R$ ${prod.priceWholesale.toLocaleString('pt-BR')}`;
-  modal.querySelector('#modal-price-retail').textContent = `R$ ${prod.priceRetail.toLocaleString('pt-BR')}`;
+  modal.querySelector('#modal-price-wholesale').textContent = `R$ ${prod.priceWholesale.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+  modal.querySelector('#modal-price-retail').textContent = `R$ ${prod.priceRetail.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
   
   const specsBox = modal.querySelector('#modal-specs');
   if (specsBox) {
